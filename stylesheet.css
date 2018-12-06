@@ -1,3 +1,7 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
 h5{
 	text-align: center;
 }
@@ -5,6 +9,10 @@ h5{
 h6{
 	text-align: center;
 	font-size: 50px;
+}
+
+.d-block{
+	max-height: 915px;
 }
 
 #card1{
@@ -21,4 +29,16 @@ h6{
 
 #card4{
 	color: #8d4bc6;
+}
+
+@font-face {
+    font-family: 'Elianto-Regular';
+    src: url("Elianto-Regular.ttf") format('truetype');
+}
+
+h1 {
+	font-family: 'Elianto-Regular';
+	font-size: 100px;
+	text-shadow: 2px 2px 4px black;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
