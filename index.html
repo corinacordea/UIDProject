@@ -9,7 +9,6 @@
 	</HEAD>
 	<BODY>
 		<nav class="navbar fixed-top navbar-dark bg-dark">
-			<!--TODO: de pus mai multe logo-uri decente-->
 			<img src="images/logo.png" width="40px">
 			<ul class="nav justify-content-end">
 				<li class="nav-item dropdown">
@@ -38,16 +37,11 @@
 					<h1>Participate in city budgeting<h1>
 				</div>
 				<div class="carousel-caption d-none d-md-block">
-					<button type="button" class="btn btn-primary">Log In</button><br>
+					<button type="button" class="btn btn-primary">Log In</button>
 					<button type="button" class="btn btn-primary">Go to projects</button>
 				</div>
 				<div class="carousel-item active" >
 					<img class="d-block w-100" src="images/Cluj.jpg" alt="First image">
-					<!-- TODO: de pus mask peste imaginea principala sa fie mai clar textul
-							   am gasit asta, dar nu merge
-								 am rezolvat; i-am pus ceva shadow se vede ok zic eu - Onica
-								 imaginile din carusel is placeholdere; daca gasiti ceva mai bun sa fie macar 1800x900 minim; si daca e mai mare e ok da sa pastreze proportia asta ca sa arate ok
-							<div class="mask rgba-black-strong"></div>-->
 				</div>
 				<div class="carousel-item">
 				  <img class="d-block w-100" src="images/matei.jpg" alt="">
@@ -64,35 +58,78 @@
 			</div>
 		</div>
 
-		<!--TODO: de completat cu informatii utile -->
 		<div class="card-group">
 			<div class="card">
 				<div class="card-body">
 					<h6 id="card1">75%</h6>
-					<p class="card-text">Projects that were declared feasible from the total submitted projects and passed to the next round</p>
+					<p class="card-text">Projects that were declared feasible from the total submitted projects.</p>
+					<div class="progress">
+ 						<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
 					<h6 id="card2">45%</h6>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<p class="card-text">People who made an account got engaged in voting on the platform.</p>
+					<div class="progress">
+  						<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
 					<h6 id="card3">18%</h6>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<p class="card-text">Projects describing the same issue were submitted by different people.</p>
+					<div class="progress">
+ 						<div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
 					<h6 id="card4">63%</h6>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<p class="card-text">Users found the platform's idea unique and useful.</p>
+					<div class="progress">
+  						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<!--TODO: parte cu etapele -->
+		<div class="card-group">
+  			<div class="card" id="etape">
+    			<div class="card-body">
+     				<h5 class="card-title">1st step</h5>
+     				<h5 class="card-title"><i class="far fa-calendar-alt"></i> July 16 - August 19</h5>
+      				<p class="card-text">You propose the project</p>
+    			</div>
+  			</div>
+  			<div class="card" id="etape">
+    			<div class="card-body">
+     				<h5 class="card-title">2nd step</h5>
+     				<h5 class="card-title"><i class="far fa-calendar-alt"></i> August 20 - September 30</h5>
+      				<p class="card-text">We analyze the projects</p>
+    			</div>
+  			</div>
+  			<div class="card" id="etape">
+    			<div class="card-body">
+     				<h5 class="card-title">3rd step</h5>
+     				<h5 class="card-title"><i class="far fa-calendar-alt"></i> October 1 - November 18</h5>
+      				<p class="card-text">You vote the projects</p>
+    			</div>
+  			</div>
+  			<div class="card" id="etape">
+    			<div class="card-body">
+     				<h5 class="card-title">4th step</h5>
+     				<h5 class="card-title"><i class="far fa-calendar-alt"></i> Starting from 2019</h5>
+      				<p class="card-text">We implement the winners</p>
+    			</div>
+  			</div>
+		</div>
+
+		<!--TODO: footer cu informatii-->
+		<footer></footer>
 
 		<!-- optional javascript for bootstrap-->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

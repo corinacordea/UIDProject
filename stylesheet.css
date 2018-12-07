@@ -2,33 +2,45 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 
-h5{
+h5 {
 	text-align: center;
 }
 
-h6{
+h6 {
 	text-align: center;
 	font-size: 50px;
 }
 
-.d-block{
+.d-block {
 	max-height: 915px;
 }
 
-#card1{
+#card1 {
 	color: #8fb4ef;
 }
 
-#card2{
+#card2 {
 	color: #51f764;
 }
 
-#card3{
+#card3 {
 	color: #f29f57;
 }
 
-#card4{
-	color: #8d4bc6;
+#card4 {
+	color: #f25746;
+}
+
+#etape {
+	background-color: #343A40;
+}
+
+#etape p, h5{
+	color: #e2dede;
+}
+
+.card-text {
+	text-align: center;
 }
 
 @font-face {
