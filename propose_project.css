@@ -1,0 +1,17 @@
+.body-content{
+	margin-top: 100px;
+	text-align: center;
+}
+
+.col-center{
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.dropdown-toggle{
+	width: 100%;
+}
+
+.dropdown-menu{
+	width: 100%;
+}
