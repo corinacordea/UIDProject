@@ -1,0 +1,29 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.body-content{
+	margin-top: 60px;
+}
+
+.dropdown{
+	text-align: center;
+}
+
+.card-title{
+	text-align: center;
+}
+
+#search{
+	margin: 10px;
+}
+
+.row{
+	margin: 5px;
+}
+
+#googleMap{
+	margin-left: 20%; 
+	margin-right: 20%;
+	height: 250px;
+}
