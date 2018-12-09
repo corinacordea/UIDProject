@@ -3,10 +3,6 @@
   src: url("Elianto-Regular.ttf") format('truetype');
 }
 
-body{
-  font-family: 'Elianto-Regular';
-}
-
 .tab-style{
   font-size:20px;
   width:50%;
