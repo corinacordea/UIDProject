@@ -1,3 +1,24 @@
+window.onload = initialize;
+
+function initialize() {
+  document.getElementById("signIn").onclick = signInFunc;
+}
+
+function signInFunc() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  if (username == "admin" && password == "admin") {
+    window.location = "admin.html";
+  }
+  else if (username == "adviser" && password == "adviser"){
+    window.location = "index-adviser.html";
+  }
+  else {
+    window.location = "index-user.html";
+  }
+  return false;
+}
+
 $(document).ready(function() {
   $('.input').blur(function() {
     var $this = $(this);
