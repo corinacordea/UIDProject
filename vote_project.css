@@ -28,3 +28,32 @@ h1{
 	margin: auto;
 	margin-bottom: 10px;
 }
+
+#navElements{
+	width: 90%;
+}
+
+.navbar-toggler{
+	margin-right: 0px;
+	float: right;
+}
+
+.navbar-nav {
+  flex-flow: row nowrap;
+  float:left;
+  width: 90%;
+}
+
+.show{
+	display: inline;
+}
+
+nav div ul li{
+	width: 25%;
+	text-align: center;
+}
+
+.navbar {
+    flex-flow: row nowrap;
+    display: inline-flex;
+}
