@@ -5,10 +5,12 @@
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<link rel="stylesheet" href="vote_project.css" type="text/css">
-		<link rel="stylesheet" href="modal.css" type="text/css">
+		<link rel="stylesheet" href="stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="review-project.css" type="text/css">
 		<script src="vote_project.js" type="text/javascript"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap" async defer></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</HEAD>
 	<BODY>
 		<nav class="navbar fixed-top navbar-dark bg-dark">
@@ -26,59 +28,42 @@
 				</div>
 		</nav>
 
-		<div class = "body-content">
-		    <div class="row">
-			<div class="input-group input-group-lg">
-			  <h1 id="project_title"></h1>
-			</div>
-			</div>
-			<div class = "row row-center">
-			<div class="col-3 "></div>
-			<div class="col-3 ">
-			  <img src="" class="img-thumbnail" id="project_image">
-			 <img src="images/magnific.jpg" class="img-thumbnail">
-			</div>
-			<div class="col-3 ">
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Type</span>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Category</span>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Address</span>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			 <div class="form-inline col-align">
-			  <label for="comment">Description</label>
-			  <textarea class="form-control" rows="5" cols= "43"id="comment"></textarea>
-			 </div>
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Estimated cost</span>
-			  </div>
-			  <input type="text" class="form-control col-align" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-				 <button class="btn btn-secondary" type="button" id="submitButton">
-					Vote
-				  </button>
-			</div>
-		</div>
-		</div>
-		
-		  	</div>
-		  </div>
-		</div>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	</BODY>
+		<div class="container" id="detailsContainer">
+  			<h2 class="my-4" id="project_title"></h2>
+ 			<div class="row">
+    			<div class="col-md-8">
+      				<img class="img-fluid" id="project_image" alt="">
+      				<div id="updateStuff">
+      					<h3 class="my-3">Choose status:</h3>
+      					<div class="form-check">
+  							<input class="form-check-input" type="radio" id="exampleRadios1" value="option1">
+  							<label class="form-check-label" for="exampleRadios1">In review</label>
+						</div>
+						<div class="form-check">
+  							<input class="form-check-input" type="radio" id="exampleRadios2" value="option2">
+  							<label class="form-check-label" for="exampleRadios2">In progress</label>
+						</div>
+						<div class="form-check">
+  							<input class="form-check-input" type="radio" id="exampleRadios3" value="option3">
+  							<label class="form-check-label" for="exampleRadios3">Finalized</label>
+						</div>
+      					<button class="btn btn-secondary" type="button" id="updateButton">Update</button>
+      				</div>
+    			</div>
+
+    		<div class="col-md-4">
+    			<h3 class="my-3">Type</h3>
+    			<p>Type 1</p>
+    			<h3 class="my-3">Category</h3>
+    			<p>Categoria cea mai tare</p>
+    			<h3 class="my-3">Address</h3>
+    			<p>Adresa cea mai smechera</p>
+      			<h3 class="my-3">Project Description</h3>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+      			<h3 class="my-3">Estimated cost</h3><p>1000 lei</p>
+    		</div>
+
+  			</div>
+  		</div>
+</BODY>
 </HTML>
