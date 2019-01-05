@@ -5,6 +5,14 @@ function initialize() {
 	document.getElementById("block2").onclick = block2;
 	document.getElementById("block3").onclick = block3;
 	document.getElementById("block4").onclick = block4;
+	document.getElementById("logout").onclick = signOut;
+}
+
+
+function signOut() {
+  sessionStorage.clear();
+  window.location = "index.html";
+  return false;
 }
 
 function block1() {
@@ -14,7 +22,7 @@ function block1() {
 	else {
 		document.getElementById("block1").innerHTML = "Block";
 	}
-	return false;	
+	return false;
 }
 
 function block2() {
@@ -24,7 +32,7 @@ function block2() {
 	else {
 		document.getElementById("block2").innerHTML = "Block";
 	}
-	return false;	
+	return false;
 }
 
 function block3() {
@@ -34,7 +42,7 @@ function block3() {
 	else {
 		document.getElementById("block3").innerHTML = "Block";
 	}
-	return false;	
+	return false;
 }
 
 function block4() {
@@ -44,5 +52,5 @@ function block4() {
 	else {
 		document.getElementById("block4").innerHTML = "Block";
 	}
-	return false;	
+	return false;
 }
