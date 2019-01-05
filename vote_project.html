@@ -28,49 +28,32 @@
 		<div class = "body-content">
 		    <div class="row">
 			<div class="input-group input-group-lg">
-			  <h1 id="project_title"></h1>
+			  <h1 class="my-4" id="project_title"></h1>
 			</div>
 			</div>
-			<div class = "row row-center">
-			<div class="col-3 "></div>
+			<div class = "row">
+			<div class="col-3 "> <img src="images/magnific.jpg" class="img-thumbnail"></div>
 			<div class="col-3 ">
 			  <img src="" class="img-thumbnail" id="project_image">
-			 <img src="images/magnific.jpg" class="img-thumbnail">
 			</div>
-			<div class="col-3 ">
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Type</span>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+			<div class="col-3 details">
+    			<h3 class="my-3">Type</h3>
+    			<p>District</p>
+    			<h3 class="my-3">Category</h3>
+    			<p>Green Space</p>
+    			<h3 class="my-3">Address</h3>
+    			<p>str. Observatorului, nr. 34</p>
 			</div>
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Category</span>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Address</span>
-			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			 <div class="form-inline col-align">
-			  <label for="comment">Description</label>
-			  <textarea class="form-control" rows="5" cols= "43"id="comment"></textarea>
-			 </div>
-			<div class="input-group input-group-lg col-align">
-			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Estimated cost</span>
-			  </div>
-			  <input type="text" class="form-control col-align" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-				 <button class="btn btn-secondary" type="button" id="submitButton">
+			<div class="col-3 details">
+      			<h3 class="my-3">Project Description</h3>
+      			<p>Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+      			<h3 class="my-3">Estimated cost</h3><p>40000 lei</p>
+				<div id = "btnWrap">
+				 <button class="btn btn-success" type="button" id="submitButton">
 					Vote
 				  </button>
+				 </div>
 			</div>
-		</div>
 		</div>
 		<div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style='margin-top: 200px;'>
 		  <div class="modal-dialog modal-sm" >

@@ -3,11 +3,6 @@
 	text-align: center;
 }
 
-.row-center{
-	margin: auto;
-	margin-bottom: 10px;
-}
-
 .col-align{
 	margin-bottom: 10px;
 }
@@ -57,3 +52,12 @@ nav div ul li{
     flex-flow: row nowrap;
     display: inline-flex;
 }
+
+#btnWrap{
+	text-align: center;
+}
+
+.details{
+	text-align: left;
+}
+
