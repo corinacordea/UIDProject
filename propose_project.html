@@ -28,12 +28,19 @@
 				</div>
 		</nav>
 		<div class = "body-content">
+			<div class="col-4 col-center">
+				<label id="message"></label>
+			</div>
+			<div class="col-4 col-center">
+				<ul id="Fields"></ul>
+			</div>
 		    <div class="col-4 col-center">
+			<form>
 			<div class="input-group input-group-lg">
 			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Title</span>
+				<span class="input-group-text">Title</span>
 			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+			  <input type="text" class="form-control" id="title" required aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 			</div>
 			</div>
 			<div class="col-4 col-center">
@@ -62,19 +69,20 @@
 			<div class="col-4 col-center">
 			<div class="input-group input-group-lg">
 			  <div class="input-group-prepend">
-				<span class="input-group-text" id="inputGroup-sizing-lg">Address</span>
+				<span class="input-group-text">Address</span>
 			  </div>
-			  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+			  <input type="text" class="form-control" id="address" required aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 			</div>
 			</div>
 			<div class="col-4 col-center">
 				<input type="file" placeholder = "Upload images..." class="form-control-file border" multiple="">
 			</div>
 			<div class="col-4 col-center">
-				 <button class="btn btn-secondary" type="button" id="submitButton">
+				 <button class="btn btn-secondary" type="submit" id="submitButton">
 					Submit project
 				  </button>
 			</div>
+			</form>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

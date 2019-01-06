@@ -33,6 +33,10 @@
 	width: 90%;
 }
 
+#Fields{
+	text-align: left;
+}
+
 .navbar-toggler{
 	margin-right: 0px;
 	float: right;
