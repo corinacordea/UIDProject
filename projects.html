@@ -82,12 +82,15 @@
 		<div class="row">
 		  <div class="col"></div>
 			<div class="col">
-			<div class="input-group mb-3" id="search">
-			  <input type="text" class="form-control" placeholder="Search..." aria-label="search" aria-describedby="basic-addon2">
-			  <div class="input-group-append">
-				<button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+			  <div class="input-group">
+				  <input type="text" class="form-control" placeholder="Search..." aria-label="search" aria-describedby="basic-addon2">
+				  <div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+				  </div>
 			  </div>
-			</div>
+			 </div>
+			 <div class="col" id="btnReset">
+			  <button class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#confirm">Reset votes</button>
 			</div>
 		  <div class="col"></div>
 		</div>
@@ -299,6 +302,26 @@
 				    </form>
 			    </div>
 		  	</div>
+		  </div>
+		</div>
+		
+		<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="modalConfirmReset" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Confirm reset votes</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				Are you sure you want to reset your votes?
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+			  </div>
+			</div>
 		  </div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
