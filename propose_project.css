@@ -9,6 +9,7 @@
 }
 
 .dropdown-toggle{
+	overflow: hidden;
 	width: 100%;
 }
 

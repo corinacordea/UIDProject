@@ -6,12 +6,13 @@
 	width: 70%;
 }
 
-.label-dropdown{
+.form-inline label{
 	width:30%;
 	justify-content: left;
 }
 
 .dropdown-toggle{
+	overflow: hidden;
 	width: 100%;
 }
 
