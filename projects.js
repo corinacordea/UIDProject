@@ -6,10 +6,17 @@ window.onload = function (){
 		titles[i] = projects[i].childNodes[1].innerText;
 		projImages[i] = projects[i].childNodes[3].childNodes[1].getAttribute("src");
 		handle(projects[i],titles[i], projImages[i]);
-	}	
+	}
+	var items = document.getElementsByClassName('dropdown-item');	
+	for(var i=0; i<items.length; i++){
+		click(items[i]);
+	}
 }
 function handle(project, title, img){
 	project.childNodes[3].childNodes[1].onclick = function(){setValues(title, img);};
+}
+function click(item){
+	item.onclick = function(){item.parentNode.parentNode.childNodes[1].innerHTML=item.innerText};
 }
 function setValues(title, img){
 	localStorage.projectTitle = title;

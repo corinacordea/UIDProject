@@ -3,7 +3,16 @@
 }
 
 .dropdown{
-	text-align: center;
+	width: 70%;
+}
+
+.label-dropdown{
+	width:30%;
+	justify-content: left;
+}
+
+.dropdown-toggle{
+	width: 100%;
 }
 
 .card-title{
@@ -39,9 +48,7 @@
   width: 90%;
 }
 
-.show{
-	display: inline;
-}
+
 
 nav div ul li{
 	width: 25%;

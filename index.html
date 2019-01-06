@@ -38,6 +38,7 @@
 				<div class="carousel-caption d-none d-md-block">
 					<button class="btn btn-primary btn-lg" href="#signin" data-toggle="modal" data-target=".log-sign">Login/Register</button>
 					<button class="btn btn-primary btn-lg"><a href="projects.html" style="text-decoration: none; color:white;">Go to projects</a></button>
+					<button class="btn btn-primary btn-lg" hidden id="btnPropose"><a href="propose_project.html" style="text-decoration: none; color:white;">Propose Project</a></button>
 				</div>
 				<div class="carousel-item active" >
 					<img class="d-block w-100" src="images/Cluj.jpg" alt="First image">
@@ -98,8 +99,8 @@
 
 		<div class="card-group">
   			<div class="card" id="etape">
-    			<div class="card-body">
-     				<h5 class="card-title">1st step</h5>
+    			<div class="card-body" onclick = "show_button()">
+     				<h5 class="card-title" >1st step</h5>
      				<h5 class="card-title"><i class="far fa-calendar-alt"></i> July 16 - August 19</h5>
       				<p class="card-text">You propose the project</p>
     			</div>

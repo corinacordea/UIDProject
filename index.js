@@ -45,3 +45,7 @@ $('#tab2').on('click' , function(){
     $('#tab2').addClass('signup-shadow');
    $('#tab1').removeClass('login-shadow');
 });
+
+function show_button(){
+	document.getElementById("btnPropose").removeAttribute("hidden");
+}

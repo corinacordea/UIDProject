@@ -16,6 +16,18 @@
 	width: 100%;
 }
 
+.dropdown{
+	width: 80%;
+}
+
+.form-inline{
+	text-align:left;
+}
+
+#category{
+	width:20%;
+	justify-content: left;
+}
 #navElements{
 	width: 90%;
 }
