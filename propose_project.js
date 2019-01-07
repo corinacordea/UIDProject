@@ -1,14 +1,14 @@
 window.onload = function (){
-	var items = document.getElementsByClassName('dropdown-item');	
+	var items = document.getElementsByClassName('dropdown-item');
 	for(var i=0; i<items.length; i++){
 		click(items[i]);
-	}	
+	}
 	title = document.getElementById("title");
 	address = document.getElementById("address");
 	submitButton = document.getElementById("submitButton");
 	message = document.getElementById("message");
 	list = document.getElementById("Fields");
-	
+
 	title.onblur = verifyTitle;
 	address.onblur = verifyAddress;
 
@@ -44,28 +44,30 @@ function verifyAddress(){
 }
 
 function submitF(){
+	verifyTitle();
+	verifyAddress();
 	var labels=[];
 	while (list.firstChild) {
 		list.removeChild(list.firstChild);
 	}
 	title = document.getElementById("title");
 	address = document.getElementById("address");
-	
+
 	if(title.getAttribute("valid") == "false"){
 		field = document.createElement('li');
 		field.appendChild(document.createTextNode("Title"));
 		list.appendChild(field);
 	}
-	
+
 	if(address.getAttribute("valid") == "false"){
 		field = document.createElement('li');
 		field.appendChild(document.createTextNode("Address"));
 		list.appendChild(field);
 	}
-		
+
 	if (list.childElementCount>0){
-		message.textContent="The data introduced in the following fields is not valid: ";	
+		message.textContent="The data introduced in the following fields is not valid: ";
 	}else{
-		alert("Project successfully added!");	
+		alert("Project successfully added!");
 	}
 }
