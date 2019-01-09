@@ -46,6 +46,12 @@ $('#tab2').on('click' , function(){
    $('#tab1').removeClass('login-shadow');
 });
 
-function show_button(){
+function propose_step(){
 	document.getElementById("btnPropose").removeAttribute("hidden");
+  document.getElementById("btnProjects").setAttribute("hidden", "");
+}
+
+function vote_step(){
+  document.getElementById("btnProjects").removeAttribute("hidden");
+  document.getElementById("btnPropose").setAttribute("hidden", "");
 }
