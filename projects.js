@@ -1,12 +1,17 @@
 window.onload = function (){
-	document.getElementById("redirectLink").onclick = redirect;
+	document.getElementById('redirectLink1').onclick = redirect;
+	document.getElementById('redirectLink2').onclick = redirect;
+	document.getElementById('redirectLink3').onclick = redirect;
+	document.getElementById('redirectLink4').onclick = redirect;
+	document.getElementById('redirectLink5').onclick = redirect;
+
 
 	var projects = document.getElementsByClassName('jsProject');
 	var titles=[];
 	var projImages=[];
 	for(var i=0; i<projects.length; i++){
 		titles[i] = projects[i].childNodes[1].innerText;
-		projImages[i] = projects[i].childNodes[3].childNodes[1].getAttribute("src");
+		projImages[i] = projects[i].childNodes[4].childNodes[1].getAttribute("src");
 		handle(projects[i],titles[i], projImages[i]);
 	}
 	var items = document.getElementsByClassName('dropdown-item');	
@@ -16,7 +21,7 @@ window.onload = function (){
 }
 
 function handle(project, title, img){
-	project.childNodes[3].childNodes[1].onclick = function(){setValues(title, img);};
+	project.childNodes[3].childNodes[1].childNodes[1].onclick = function(){setValues(title, img);};
 }
 
 function click(item){
