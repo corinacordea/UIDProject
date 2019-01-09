@@ -36,18 +36,35 @@
       				<div id="updateStuff">
       					<h3 class="my-3">Choose status:</h3>
       					<div class="form-check">
-  							<input class="form-check-input" type="radio" id="exampleRadios1" value="option1">
+  							<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   							<label class="form-check-label" for="exampleRadios1">In review</label>
 						</div>
+
 						<div class="form-check">
-  							<input class="form-check-input" type="radio" id="exampleRadios2" value="option2">
-  							<label class="form-check-label" for="exampleRadios2">In progress</label>
+							<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+							<label class="form-check-label" for="exampleRadios2">In progress</label>
 						</div>
+
 						<div class="form-check">
-  							<input class="form-check-input" type="radio" id="exampleRadios3" value="option3">
-  							<label class="form-check-label" for="exampleRadios3">Finalized</label>
+							<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+							<label class="form-check-label" for="exampleRadios3">Finalized</label>
 						</div>
-      					<button class="btn btn-secondary" type="button" id="updateButton">Update</button>
+
+      					<button class="btn btn-secondary" type="button" id="updateButton" data-toggle="modal" data-target="#notification">Update</button>
+
+      					<div class="modal fade" id="notification" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  							<div class="modal-dialog modal-dialog-centered" role="document">
+    						<div class="modal-content">
+      							<div class="modal-body">
+      								Your update has been successfully recorded!
+      							</div>
+      							<div class="modal-footer">
+       							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      							</div>
+    						</div>
+  							</div>
+						</div>
+
       				</div>
     			</div>
 
