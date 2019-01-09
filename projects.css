@@ -114,3 +114,7 @@ nav div ul li{
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+
+#embeddedMap{
+	text-align: center;
+}
