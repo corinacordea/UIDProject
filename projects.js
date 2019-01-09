@@ -1,4 +1,6 @@
 window.onload = function (){
+	document.getElementById("redirectLink").onclick = redirect;
+
 	var projects = document.getElementsByClassName('jsProject');
 	var titles=[];
 	var projImages=[];
@@ -12,16 +14,37 @@ window.onload = function (){
 		click(items[i]);
 	}
 }
+
 function handle(project, title, img){
 	project.childNodes[3].childNodes[1].onclick = function(){setValues(title, img);};
 }
+
 function click(item){
 	item.onclick = function(){item.parentNode.parentNode.childNodes[1].innerHTML=item.innerText};
 }
+
 function setValues(title, img){
 	localStorage.projectTitle = title;
 	localStorage.projectImage = img;
 }
+
+function redirect(){
+	if (sessionStorage.getItem("userType") == "admin") {
+		window.location = "review-project-admin.html";
+	}
+	else {
+		if (sessionStorage.getItem("userType") == "user") {
+			window.location = "vote_project.html";
+		}
+		else {
+			if (sessionStorage.getItem("userType") == "adviser") {
+				//urmeaza 
+			}
+		}
+	} 
+  	return false;
+}
+
 function myMap() {
 var mapProp= {
     center:new google.maps.LatLng(46.7712,23.6236),
@@ -29,4 +52,3 @@ var mapProp= {
 };
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
-
