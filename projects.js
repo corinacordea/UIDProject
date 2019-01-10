@@ -1,4 +1,5 @@
 window.onload = function (){
+	document.getElementById("signIn").onclick = signInFunc;
 	var projects = document.getElementsByClassName('jsProject');
 	var imgs = document.getElementsByClassName('hvrbox');
 	var titles=[];
@@ -9,9 +10,15 @@ window.onload = function (){
 		projImages[i] = imgs[i].childNodes[1].getAttribute("src");
 		handle(projects[i],titles[i], projImages[i], links[i]);
 	}
-	var items = document.getElementsByClassName('dropdown-item');	
+	var items = document.getElementsByClassName('dropdown-item');
 	for(var i=0; i<items.length; i++){
 		click(items[i]);
+	}
+	if(sessionStorage.getItem("userType") === null) {
+		document.getElementById("btnReset").style.display = 'none';
+	}
+	else {
+		document.getElementById("btnReset").style.display = 'block';
 	}
 }
 
@@ -38,9 +45,30 @@ function redirect(){
 		}
 		else {
 			if (sessionStorage.getItem("userType") == "adviser") {
-				//urmeaza 
+				//urmeaza
 			}
 		}
-	} 
+	}
   	return false;
+}
+
+function signInFunc() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  if (username == "admin" && password == "admin") {
+    sessionStorage.setItem("userType", "admin");
+    sessionStorage.setItem("user", "admin");
+		window.location = "projects.html";
+  }
+  else if (username == "adviser" && password == "adviser"){
+    sessionStorage.setItem("userType", "adviser");
+    sessionStorage.setItem("user", "adviser");
+		window.location = "projects.html";
+  }
+  else {
+    sessionStorage.setItem("userType", "user");
+    sessionStorage.setItem("user", "user");
+    window.location = "projects.html";
+  }
+  return false;
 }
