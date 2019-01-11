@@ -2,7 +2,7 @@ window.onload = initialize;
 
 function initialize() {
   document.getElementById("signIn").onclick = signInFunc;
-  document.getElementById("logout").onclick = signOut;
+  document.getElementById("confirmsignup").onclick = signUp;
 }
 
 function signInFunc() {
@@ -18,9 +18,9 @@ function signInFunc() {
     sessionStorage.setItem("user", "adviser");
     window.location = "index-adviser.html";
   }
-  else {
+  else if (username == localStorage.username && password == localStorage.password){
     sessionStorage.setItem("userType", "user");
-    sessionStorage.setItem("user", "user");
+    sessionStorage.setItem("user", username);
     window.location = "index-user.html";
   }
   return false;
@@ -34,4 +34,16 @@ function propose_step(){
 function vote_step(){
   document.getElementById("btnProjects").removeAttribute("hidden");
   document.getElementById("btnPropose").setAttribute("hidden", "");
+}
+
+function signUp() {
+  localStorage.username = document.getElementById("signup_username").value;
+  localStorage.password = document.getElementById("signup_password").value;
+  localStorage.has_proposed = 0;
+  localStorage.has_voted = 0;
+  localStorage.has_promoted = 0;
+  sessionStorage.setItem("userType", "user");
+  sessionStorage.setItem("user", document.getElementById("signup_username").value);
+  window.location = "index-user.html";
+  return false;
 }

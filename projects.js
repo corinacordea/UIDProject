@@ -1,5 +1,12 @@
 window.onload = function (){
 	document.getElementById("signIn").onclick = signInFunc;
+	document.getElementById("confirmsignup").onclick = signUp;
+	if(sessionStorage.getItem("userType") === null) {
+		document.getElementById("btnReset").style.display = 'none';
+	}
+	else {
+		document.getElementById("btnReset").style.display = 'block';
+	}
 	var projects = document.getElementsByClassName('jsProject');
 	var imgs = document.getElementsByClassName('hvrbox');
 	var titles=[];
@@ -13,12 +20,6 @@ window.onload = function (){
 	var items = document.getElementsByClassName('dropdown-item');
 	for(var i=0; i<items.length; i++){
 		click(items[i]);
-	}
-	if(sessionStorage.getItem("userType") === null) {
-		document.getElementById("btnReset").style.display = 'none';
-	}
-	else {
-		document.getElementById("btnReset").style.display = 'block';
 	}
 }
 
@@ -65,10 +66,22 @@ function signInFunc() {
     sessionStorage.setItem("user", "adviser");
 		window.location = "projects.html";
   }
-  else {
+	else if (username == localStorage.username && password == localStorage.password){
     sessionStorage.setItem("userType", "user");
-    sessionStorage.setItem("user", "user");
+    sessionStorage.setItem("user", username);
     window.location = "projects.html";
   }
+  return false;
+}
+
+function signUp() {
+  localStorage.username = document.getElementById("signup_username").value;
+  localStorage.password = document.getElementById("signup_password").value;
+  localStorage.has_proposed = 0;
+  localStorage.has_voted = 0;
+  localStorage.has_promoted = 0;
+  sessionStorage.setItem("userType", "user");
+  sessionStorage.setItem("user", document.getElementById("signup_username").value);
+  window.location = "projects.html";
   return false;
 }
