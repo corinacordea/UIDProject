@@ -7,11 +7,12 @@ window.onload = function (){
 	address = document.getElementById("address");
 	submitButton = document.getElementById("submitButton");
 	message = document.getElementById("message");
+	comment = document.getElementById("comment");
 	list = document.getElementById("Fields");
 
 	title.onblur = verifyTitle;
 	address.onblur = verifyAddress;
-
+	comment.onblur = verifyComment;
 	submitButton.onclick = submitF;
 }
 
@@ -20,9 +21,9 @@ function click(item){
 }
 
 function verifyTitle(){
-	var re = /[a-zA-Z]{3,}/;
+	var re = /[a-zA-Z]{5,}/;
 	if(!re.test(title.value)){
-		title.style.backgroundColor = "yellow";
+		title.style.backgroundColor = "pink";
 		title.setAttribute("valid", "false");
 	}else{
 		title.style.backgroundColor = "white";
@@ -30,12 +31,23 @@ function verifyTitle(){
 	}
 }
 
+function verifyComment(){
+	var re = /[a-zA-Z]{50,}/;
+	if(!re.test(comment.value)){
+		comment.style.backgroundColor = "pink";
+		comment.setAttribute("valid", "false");
+	}else{
+		comment.style.backgroundColor = "white";
+		comment.setAttribute("valid", "true");
+	}
+}
+
 function verifyAddress(){
-	var re = /[a-zA-Z]{3,}/;
+	var re = /[a-zA-Z]{10,}/;
 	var re1 = /[0-9]{1,}/;
 	var re2 = /[@#$%^&*]/;
 	if(!re.test(address.value) || !re1.test(address.value) || re2.test(address.value)){
-		address.style.backgroundColor = "yellow";
+		address.style.backgroundColor = "pink";
 		address.setAttribute("valid", "false");
 	}else{
 		address.style.backgroundColor = "white";
@@ -68,6 +80,13 @@ function submitF(){
 	if (list.childElementCount>0){
 		message.textContent="The data introduced in the following fields is not valid: ";
 	}else{
+		localStorage.proposalTitle = document.getElementById("title").value;
+		localStorage.proposalDescription = document.getElementById("comment").value;
+		localStorage.proposalAddress = document.getElementById("address").value;
+		var e = document.getElementById("category");
+		localStorage.proposalCategory = e.options[e.selectedIndex].text;
+		localStorage.proposalVotes = 0;
+		localStorage.proposalFiles = document.getElementById("inputFiles").files;
 		alert("Project successfully added!");
 	}
 }

@@ -5,9 +5,9 @@
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylesheet.css" type="text/css">
 		<link rel="stylesheet" href="propose_project.css" type="text/css">
-		<script src="propose_project.js" type="text/javascript"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap" async defer></script>
+		<link rel="stylesheet" href="modal.css" type="text/css">
 	</HEAD>
 	<BODY>
 		<nav class="navbar fixed-top navbar-dark bg-dark">
@@ -34,58 +34,55 @@
 			<div class="col-4 col-center">
 				<ul id="Fields"></ul>
 			</div>
-		    <div class="col-4 col-center">
-			<form>
-			<div class="input-group input-group-lg">
-			  <div class="input-group-prepend">
-				<span class="input-group-text">Title</span>
-			  </div>
-			  <input type="text" class="form-control" id="title" required="" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			</div>
-			<div class="col-4 col-center">
-			 <div class="form-inline">
-			  <label for="comment">Description</label>
-			  <textarea required="" class="form-control" rows="5" cols= "43"id="comment"></textarea>
-			 </div>
-		    </div>
-			<div class="col-4 col-center">
-				<div class="form-inline">
-					<label id="category">Category</label>
-					<div class="dropdown">
-					  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-					  </button>
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="#">Alleys, Sidewalks and Pietonal Zones</a>
-						<a class="dropdown-item" href="#">Cultural and Educational Infrastructure</a>
-						<a class="dropdown-item" href="#">Digital City</a>
-						<a class="dropdown-item" href="#">Green Space</a>
-						<a class="dropdown-item" href="#">Mobility, Accessibility and Road Safety</a>
-						<a class="dropdown-item" href="#">Public Space Improvement</a>
-					  </div>
+		  <div class="col-4 col-center">
+				<form>
+					<div class="group">
+						<input required="" class="input" type="text" id="title"><span class="highlight">
+						</span><span class="bar"></span>
+						<label class="label" for="date" style='margin-left:15px'>Title</label>
 					</div>
-				</div>
+					<br><br>
+					<div class="group">
+						<textarea required="" class="input" type="text" rows="4" cols= "50" id="comment"></textarea><span class="highlight">
+						</span><span class="bar"></span>
+						<label class="label" for="date" style='margin-left:15px'>Description</label>
+					</div>
+					<br><br>
+					<div class="group">
+						<input required="" class="input" type="text" id="address"><span class="highlight">
+						</span><span class="bar"></span>
+						<label class="label" for="date" style='margin-left:15px'>Address</label>
+					</div>
+					<br><br><br>
+					<div class="col-7 col-center">
+						<label style="margin-right: 20px">Category</label>
+							<select id="category" required="" style="width: 200px">
+							  <option value="1" selected="selected">Alleys, Sidewalks and Pietonal Zones</option>
+							  <option value="2">Cultural and Educational Infrastructure</option>
+							  <option value="3">Digital City</option>
+								<option value="4">Green Space</option>
+							  <option value="5">Mobility, Accessibility and Road Safety</option>
+							  <option value="6">Public Space Improvement</option>
+							</select>
+					</div>
+					<br><br>
+					<div class="col-5 col-center">
+						<input type="file" placeholder = "Upload images..." class="inputfile" multiple="" id="inputFiles">
+					</div>
+					<br>
+					<div class="col-4 col-center">
+						<div class="controls">
+							<button id="submitButton" name="submit" type="submit" class="btn btn-primary btn-block">Submit proposal</button>
+						</div>
+					</div>
+				</form>
 			</div>
-			<div class="col-4 col-center">
-			<div class="input-group input-group-lg">
-			  <div class="input-group-prepend">
-				<span class="input-group-text">Address</span>
-			  </div>
-			  <input type="text" class="form-control" id="address" required="" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			</div>
-			<div class="col-4 col-center">
-				<input type="file" placeholder = "Upload images..." class="form-control-file border" multiple="">
-			</div>
-			<div class="col-4 col-center">
-				 <button class="btn btn-secondary" type="submit" id="submitButton">
-					Submit project
-				  </button>
-			</div>
-			</form>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="propose_project.js" type="text/javascript"></script>
+		<script src="modal.js" type="text/javascript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap" async defer></script>
 	</BODY>
 </HTML>
