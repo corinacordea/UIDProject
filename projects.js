@@ -46,7 +46,7 @@ function redirect(){
 		}
 		else {
 			if (sessionStorage.getItem("userType") == "adviser") {
-				//urmeaza
+				window.location = "review-project-adviser.html";
 			}
 		}
 	}

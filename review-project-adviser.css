@@ -1,0 +1,11 @@
+body {
+	background-image: url("images/back.jpg");
+}
+
+#detailsContainer {
+	margin-top: 100px;
+}
+
+#updateButton {
+	margin-top: 10px;
+}
