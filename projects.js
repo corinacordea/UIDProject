@@ -13,7 +13,7 @@ window.onload = function (){
 	var projImages=[];
 	links = document.getElementsByClassName('redirectLink');
 	for(var i=0; i<projects.length; i++){
-		titles[i] = projects[i].childNodes[1].innerText;
+		titles[i] = projects[i].childNodes[3].innerText;
 		projImages[i] = imgs[i].childNodes[1].getAttribute("src");
 		handle(projects[i],titles[i], projImages[i], links[i]);
 	}
