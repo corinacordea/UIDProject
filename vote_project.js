@@ -6,7 +6,14 @@ window.onload = function (){
 
 function vote() {
 	if (document.getElementById("submitButton").innerHTML == "Vote") {
-		document.getElementById("submitButton").innerHTML = "Voted";
+		if (localStorage.has_voted < 4) {
+			localStorage.has_voted = localStorage.has_voted + 1;
+			document.getElementById("submitButton").innerHTML = "Voted";
+			$("#confirmVote").modal('show');
+		}
+		else {
+			$("#errorVote").modal('show');
+		}
 	}
 	else {
 		alert("You already voted for this project!");

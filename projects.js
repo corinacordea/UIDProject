@@ -1,6 +1,8 @@
 window.onload = function (){
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
+	document.getElementById("btnReset").onclick = resetVotes;
+
 	if(sessionStorage.getItem("userType") === null) {
 		document.getElementById("btnReset").style.display = 'none';
 	}
@@ -84,4 +86,8 @@ function signUp() {
   sessionStorage.setItem("user", document.getElementById("signup_username").value);
   window.location = "projects.html";
   return false;
+}
+
+function resetVotes() {
+	localStorage.has_voted = 0;
 }

@@ -52,7 +52,7 @@
       			<h3 class="my-3">Estimated cost</h3><p>40000 lei</p>
 
 				<div id = "btnWrap">
-					<button class="btn btn-success" type="button" id="submitButton" data-toggle="modal" data-target="#confirmVote">Vote</button>
+					<button class="btn btn-success" type="button" id="submitButton">Vote</button>
 				</div>
 
       			<div class="modal fade" id="confirmVote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -67,6 +67,20 @@
     					</div>
   					</div>
 				</div>
+
+				<div class="modal fade" id="errorVote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  					<div class="modal-dialog modal-dialog-centered" role="document">
+    					<div class="modal-content">
+      						<div class="modal-body">
+      							The vote cannot be processed because you have voted 2 times. In case you changed your mind, reset the votes and start again.  
+      						</div>
+      						<div class="modal-footer">
+       						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
 			</div>
 		</div>
 		<div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style='margin-top: 200px;'>
