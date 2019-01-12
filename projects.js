@@ -17,10 +17,15 @@ window.onload = function (){
 	var titles=[];
 	var projImages=[];
 	links = document.getElementsByClassName('redirectLink');
+	types = document.getElementsByClassName('type');
+	categories = document.getElementsByClassName('category');
+	addresses = document.getElementsByClassName('address');
+	descriptions = document.getElementsByClassName('description');
+	prices = document.getElementsByClassName('price');
 	for(var i=0; i<projects.length; i++){
 		titles[i] = projects[i].childNodes[3].innerText;
 		projImages[i] = imgs[i].childNodes[1].getAttribute("src");
-		handle(projects[i],titles[i], projImages[i], links[i]);
+		handle(projects[i],titles[i], projImages[i], links[i], types[i], categories[i], addresses[i], descriptions[i], prices[i]);
 	}
 	var items = document.getElementsByClassName('dropdown-item');
 	for(var i=0; i<items.length; i++){
@@ -46,8 +51,8 @@ function addProject(){
 	document.getElementById("votesProposed").innerText = localStorage.proposalVotes;
 }
 
-function handle(project, title, img, projLink){
-	projLink.onclick = function(){setValues(title, img); redirect()};
+function handle(project, title, img, projLink, type, category, address, description, price){
+	projLink.onclick = function(){setValues(title, img, type, category, address, description, price); redirect()};
 }
 
 function click(item){
@@ -108,8 +113,8 @@ function filterProjects(projects, values, value){
 	}
 }
 
-function setValues(title, img){
-	if(localStorage.has_proposed == 1){
+function setValues(title, img, type, category, address, description, price){
+	if(title == ""){
 		localStorage.projectTitle = localStorage.proposalTitle;
 		var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
 		localStorage.projectImage = "images/"+storedImages[0];
@@ -117,6 +122,11 @@ function setValues(title, img){
 		localStorage.projectTitle = title;
 		localStorage.projectImage = img;
 	}
+	localStorage.projectType = type.innerText;
+	localStorage.projectCategory = category.innerText;
+	localStorage.projectAddress = address.innerText;
+	localStorage.projectDescription = description.innerText;
+	localStorage.projectPrice = price.innerText;
 }
 
 function redirect(){
