@@ -86,6 +86,7 @@ function submitF(){
 		var e = document.getElementById("category");
 		localStorage.proposalCategory = e.options[e.selectedIndex].text;
 		localStorage.proposalVotes = 0;
+		localStorage.has_proposed = 1;
 		localStorage.proposalFiles = document.getElementById("inputFiles").files;
 		alert("Project successfully added!");
 	}
