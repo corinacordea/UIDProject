@@ -16,15 +16,25 @@ function vote() {
 			document.getElementById("submitButton").innerHTML = "Voted";
 			$("#confirmVote").modal('show');
 
-			//le schimb dupa ce populam
 			if(document.getElementById("project_title").innerText == "Promenade Over/On Somes") {
 				localStorage.project1++;
 			}
-			if(document.getElementById("project_title").innerText == "Statuie Ecvestra Nicolae-Florian Onica") {
+			else if(document.getElementById("project_title").innerText == "Statuie Ecvestra Nicolae-Florian Onica") {
 				localStorage.project2++;
 			}
-			if(document.getElementById("project_title").innerText == "3D Digital Model of the City") {
+			else if(document.getElementById("project_title").innerText == "3D Digital Model of the City") {
 				localStorage.project3++;
+			}
+			else if(document.getElementById("project_title").innerText == "Colina Park Rehabilitation") {
+				localStorage.project4++;
+			}
+			else if(document.getElementById("project_title").innerText == "Cluj Bike Station Near the Office Building") {
+				localStorage.project5++;
+			}
+			else if(document.getElementById("project_title").innerText == "Removal of High Voltage Poles on the Somes River") {
+				localStorage.project6++;
+			}else{
+				localStorage.proposalVotes++;
 			}
 
 		}

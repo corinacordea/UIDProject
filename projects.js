@@ -1,4 +1,15 @@
 window.onload = function (){
+	if(localStorage.has_proposed == 1){
+		addProject();
+	}
+
+	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
+	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
+	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
+	document.getElementById("project4").innerHTML = localStorage.project4 + " votes";
+	document.getElementById("project5").innerHTML = localStorage.project5 + " votes";
+	document.getElementById("project6").innerHTML = localStorage.project6 + " votes";
+	
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
 	document.getElementById("btnReset").onclick = resetVotes;
@@ -32,23 +43,18 @@ window.onload = function (){
 		click(items[i]);
 	}
 	document.getElementById("search").onclick = search;
-
-	if(localStorage.has_proposed == 1){
-		addProject();
-	}
-
-	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
-	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
-	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
 }
 
 function addProject(){
 	document.getElementById("last_row").removeAttribute("hidden");
 	document.getElementById("titleProposed").innerText = localStorage.proposalTitle;
 	document.getElementById("categoryProposed").innerText = localStorage.proposalCategory;
+	document.getElementById("descriptionProposed").innerText = localStorage.proposalDescription;
+	document.getElementById("addressProposed").innerText = localStorage.proposalAddress;
+	document.getElementById("priceProposed").innerText = localStorage.proposalPrice;
 	var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
 	document.getElementById("imgProposed").setAttribute("src", "images/"+storedImages[0]);
-	document.getElementById("votesProposed").innerText = localStorage.proposalVotes;
+	document.getElementById("votesProposed").innerText = localStorage.proposalVotes + " votes";
 }
 
 function handle(project, title, img, projLink, type, category, address, description, price){
@@ -192,6 +198,18 @@ function resetVotes() {
 		}
 		if(localStorage.project3 != 4500) {
 			localStorage.project3--;
+		}
+		if(localStorage.project4 != 10) {
+			localStorage.project4--;
+		}
+		if(localStorage.project5 != 700) {
+			localStorage.project5--;
+		}
+		if(localStorage.project6 != 200) {
+			localStorage.project6--;
+		}
+		if(localStorage.proposalVotes != 0) {
+			localStorage.proposalVotes--;
 		}
 		window.location = "projects.html";
 	}
