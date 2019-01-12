@@ -83,6 +83,7 @@ function submitF(){
 		localStorage.proposalTitle = document.getElementById("title").value;
 		localStorage.proposalDescription = document.getElementById("comment").value;
 		localStorage.proposalAddress = document.getElementById("address").value;
+		localStorage.proposalPrice = document.getElementById("price").value;
 		var e = document.getElementById("category");
 		localStorage.proposalCategory = e.options[e.selectedIndex].text;
 		localStorage.proposalVotes = 0;

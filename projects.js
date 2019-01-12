@@ -34,16 +34,16 @@ window.onload = function (){
 
 	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
 	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
-	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";		
+	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
 }
 
 function addProject(){
 	document.getElementById("last_row").removeAttribute("hidden");
-	document.getElementById("titleProposed").innerText = localStorage.proposalTitle; 
-	document.getElementById("categoryProposed").innerText = localStorage.proposalCategory; 
+	document.getElementById("titleProposed").innerText = localStorage.proposalTitle;
+	document.getElementById("categoryProposed").innerText = localStorage.proposalCategory;
 	var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
-	document.getElementById("imgProposed").setAttribute("src", "images/"+storedImages[0]); 
-	document.getElementById("votesProposed").innerText = localStorage.proposalVotes; 
+	document.getElementById("imgProposed").setAttribute("src", "images/"+storedImages[0]);
+	document.getElementById("votesProposed").innerText = localStorage.proposalVotes;
 }
 
 function handle(project, title, img, projLink){
@@ -89,13 +89,13 @@ function filter(){
 	var feasibilityValues = document.getElementsByClassName('feasibility');
 	for(var i=0; i<projList.length; i++){
 		if(type != "All" && type != ""){
-				filterProjects(projList, typeValues, type);	
+				filterProjects(projList, typeValues, type);
 		}
 		if(category != "All" && category != ""){
-				filterProjects(projList, categoryValues, category);	
+				filterProjects(projList, categoryValues, category);
 		}
 		if(feasibility != "All" && feasibility != ""){
-				filterProjects(projList, feasibilityValues, feasibility);	
+				filterProjects(projList, feasibilityValues, feasibility);
 		}
 	}
 }
@@ -172,7 +172,7 @@ function signUp() {
 function resetVotes() {
 	localStorage.has_voted = 0;
 	$("#confirm").modal('show');
-	
+
 	document.getElementById("yesReset").onclick = function(){
 		if(localStorage.project1 != 300) {
 			localStorage.project1--;
