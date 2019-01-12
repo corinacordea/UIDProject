@@ -17,13 +17,13 @@ function vote() {
 			$("#confirmVote").modal('show');
 
 			//le schimb dupa ce populam
-			if(document.getElementById("project_title").innerText == "Project 1") {
+			if(document.getElementById("project_title").innerText == "Promenade Over/On Somes") {
 				localStorage.project1++;
 			}
 			if(document.getElementById("project_title").innerText == "Statuie Ecvestra Nicolae-Florian Onica") {
 				localStorage.project2++;
 			}
-			if(document.getElementById("project_title").innerText == "Project 3") {
+			if(document.getElementById("project_title").innerText == "3D Digital Model of the City") {
 				localStorage.project3++;
 			}
 
