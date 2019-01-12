@@ -28,6 +28,18 @@ window.onload = function (){
 	}
 	document.getElementById("search").onclick = search;
 
+	if(localStorage.has_proposed == 1){
+		addProject();
+	}		
+}
+
+function addProject(){
+	document.getElementById("last_row").removeAttribute("hidden");
+	document.getElementById("titleProposed").innerText = localStorage.proposalTitle; 
+	document.getElementById("categoryProposed").innerText = localStorage.proposalCategory; 
+	var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
+	document.getElementById("imgProposed").setAttribute("src", "images/"+storedImages[0]); 
+	document.getElementById("votesProposed").innerText = localStorage.proposalVotes; 
 	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
 	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
 	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
@@ -96,8 +108,14 @@ function filterProjects(projects, values, value){
 }
 
 function setValues(title, img){
-	localStorage.projectTitle = title;
-	localStorage.projectImage = img;
+	if(localStorage.has_proposed == 1){
+		localStorage.projectTitle = localStorage.proposalTitle;
+		var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
+		localStorage.projectImage = "images/"+storedImages[0];
+	}else{
+		localStorage.projectTitle = title;
+		localStorage.projectImage = img;
+	}
 }
 
 function redirect(){

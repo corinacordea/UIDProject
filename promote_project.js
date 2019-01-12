@@ -1,6 +1,7 @@
 	window.onload = function (){
 	document.getElementById("project_title").innerText = localStorage.proposalTitle;
-	document.getElementById("project_image").setAttribute("src", localStorage.proposalFiles);
+	var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
+	document.getElementById("project_image").setAttribute("src", "images/"+storedImages[0]);
 	document.getElementById("project_desc").innerText = localStorage.proposalDescription;
 	document.getElementById("project_address").innerText = localStorage.proposalAddress;
 	document.getElementById("project_category").innerText = localStorage.proposalCategory;

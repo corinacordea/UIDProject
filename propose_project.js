@@ -87,7 +87,13 @@ function submitF(){
 		localStorage.proposalCategory = e.options[e.selectedIndex].text;
 		localStorage.proposalVotes = 0;
 		localStorage.has_proposed = 1;
-		localStorage.proposalFiles = document.getElementById("inputFiles").files;
+		imgs = document.getElementById("inputFiles").files;
+		var imgNames = [];
+		localStorage.proposalFiles = [];
+		for(var i = 0; i<imgs.length; i++){
+			imgNames[i] = imgs[i].name;
+		}
+		localStorage.setItem("proposalFiles", JSON.stringify(imgNames));
 		alert("Project successfully added!");
 	}
 }
