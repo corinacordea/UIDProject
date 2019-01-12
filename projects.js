@@ -1,6 +1,8 @@
 window.onload = function (){
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
+	document.getElementById("btnReset").onclick = resetVotes;
+
 	document.getElementById("type").parentNode.childNodes[1].innerHTML = "";
 	document.getElementById("category").parentNode.childNodes[1].innerHTML = "";
 	document.getElementById("feasibility").parentNode.childNodes[1].innerHTML = "";
@@ -25,6 +27,7 @@ window.onload = function (){
 		click(items[i]);
 	}
 	document.getElementById("search").onclick = search;
+
 	if(localStorage.has_proposed == 1){
 		addProject();
 	}		
@@ -37,6 +40,9 @@ function addProject(){
 	var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
 	document.getElementById("imgProposed").setAttribute("src", "images/"+storedImages[0]); 
 	document.getElementById("votesProposed").innerText = localStorage.proposalVotes; 
+	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
+	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
+	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
 }
 
 function handle(project, title, img, projLink){
@@ -160,4 +166,8 @@ function signUp() {
   sessionStorage.setItem("user", document.getElementById("signup_username").value);
   window.location = "projects.html";
   return false;
+}
+
+function resetVotes() {
+	localStorage.has_voted = 0;
 }

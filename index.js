@@ -3,6 +3,10 @@ window.onload = initialize;
 function initialize() {
   document.getElementById("signIn").onclick = signInFunc;
   document.getElementById("confirmsignup").onclick = signUp;
+
+  localStorage.project1 = 300;
+  localStorage.project2 = 163000;
+  localStorage.project3 = 4500;
 }
 
 function signInFunc() {
