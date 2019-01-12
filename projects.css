@@ -2,6 +2,10 @@ body {
 	background-image: url("images/back.jpg");
 }
 
+html {
+  scroll-behavior: smooth;
+ }
+
 .body-content{
 	margin-top: 60px;
 }

@@ -16,7 +16,6 @@ function vote() {
 			document.getElementById("submitButton").innerHTML = "Voted";
 			$("#confirmVote").modal('show');
 
-			//le schimb dupa ce populam
 			if(document.getElementById("project_title").innerText == "Promenade Over/On Somes") {
 				localStorage.project1++;
 			}
