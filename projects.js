@@ -152,4 +152,19 @@ function signUp() {
 
 function resetVotes() {
 	localStorage.has_voted = 0;
+	$("#confirm").modal('show');
+	
+	document.getElementById("yesReset").onclick = function(){
+		if(localStorage.project1 != 300) {
+			localStorage.project1--;
+		}
+		if(localStorage.project2 != 163000) {
+			localStorage.project2--;
+		}
+		if(localStorage.project3 != 4500) {
+			localStorage.project3--;
+		}
+		window.location = "projects.html";
+	}
+	return false;
 }
