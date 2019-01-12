@@ -37,7 +37,7 @@
 							<div class="dropdown">
 								<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="type">
 									<a class="dropdown-item" href="#">All</a>
 									<a class="dropdown-item" href="#">City wide</a>
 									<a class="dropdown-item" href="#">Neighborhood wide</a>
@@ -53,7 +53,7 @@
 							<div class="dropdown">
 								<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id ="category">
 									<a class="dropdown-item" href="#">All</a>
 									<a class="dropdown-item" href="#">Alleys, Sidewalks and Pietonal Zones</a>
 									<a class="dropdown-item" href="#">Cultural and Educational Infrastructure</a>
@@ -72,7 +72,7 @@
 							<div class="dropdown">
 								<button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="feasibility">
 									<a class="dropdown-item" href="#">All</a>
 									<a class="dropdown-item" href="#">Feasible</a>
 									<a class="dropdown-item" href="#">Not feasible</a>
@@ -86,9 +86,9 @@
 					<div class="col"></div>
 					<div class="col">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search..." aria-label="search" aria-describedby="basic-addon2">
+							<input type="text" class="form-control" id = "searchInput" placeholder="Search..." aria-label="search" aria-describedby="basic-addon2">
 							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+								<button class="btn btn-outline-secondary" id = "search" type="button"><i class="fas fa-search"></i></button>
 							</div>
 						</div>
 					</div>
@@ -102,7 +102,10 @@
 			<div class="projects-list">
 				<div class="row">
 					<div class="col"></div>
-					<div class="col">
+					<div class="col project">
+						<p class="type" hidden>Street wide</p>
+						<p class="category" hidden>Alleys, Sidewalks and Pietonal Zones</p>
+						<p class="feasibility" hidden>Feasible</p>
 						<div class="jsProject">
 							<a class = "redirectLink">
 								<div class="hvrbox">
@@ -120,7 +123,10 @@
 
 						</div>
 					</div>
-					<div class="col">
+					<div class="col project">
+						<p class="type" hidden>City wide</p>
+						<p class="category" hidden>Cultural and Educational Infrastructure</p>
+						<p class="feasibility" hidden>Feasible</p>
 						<div class="jsProject">
 							<a class = "redirectLink">
 								<div class="hvrbox">
@@ -138,7 +144,10 @@
 
 						</div>
 					</div>
-					<div class="col">
+					<div class="col project">
+						<p class="type" hidden>City wide</p>
+						<p class="category" hidden>Digital City</p>
+						<p class="feasibility" hidden>Feasible</p>
 						<div class="jsProject">
 							<a class = "redirectLink">
 								<div class="hvrbox">
@@ -160,7 +169,10 @@
 			<br><br><br>
 			<div class="row">
 				<div class="col"></div>
-				<div class="col">
+				<div class="col project">
+					<p class="type" hidden>Neighborhood wide</p>
+					<p class="category" hidden>Green Space</p>
+					<p class="feasibility" hidden>Not feasible</p>
 					<div class="jsProject">
 						<a class = "redirectLink">
 							<div class="hvrbox">
@@ -177,7 +189,10 @@
 						<h5 class="card-title" >Project 4</h5>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col project">
+					<p class="type" hidden>Neighborhood wide</p>
+					<p class="category" hidden>Mobility, Accessibility and Road Safety</p>
+					<p class="feasibility" hidden>Feasible</p>
 					<div class="jsProject">
 						<a class = "redirectLink">
 							<div class="hvrbox">
@@ -194,7 +209,10 @@
 						<h5 class="card-title" >Project 5</h5>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col project">
+					<p class="type" hidden>Street wide</p>
+					<p class="category" hidden>Public Space Improvement</p>
+					<p class="feasibility" hidden>Not feasible</p>
 					<div class="jsProject">
 						<a class="redirectLink">
 							<div class="hvrbox">
@@ -211,6 +229,7 @@
 						<h5 class="card-title" >Project 6</h5>
 					</div>
 				</div>
+				<div class="col"></div>
 			</div>
 		</div>
 		<br><br><br>

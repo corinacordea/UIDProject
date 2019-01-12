@@ -1,8 +1,14 @@
 window.onload = function (){
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
+<<<<<<< HEAD
 	document.getElementById("btnReset").onclick = resetVotes;
 
+=======
+	document.getElementById("type").parentNode.childNodes[1].innerHTML = "";
+	document.getElementById("category").parentNode.childNodes[1].innerHTML = "";
+	document.getElementById("feasibility").parentNode.childNodes[1].innerHTML = "";
+>>>>>>> 3eb73b96f45e49eb30d931f73ce2ef67177285e4
 	if(sessionStorage.getItem("userType") === null) {
 		document.getElementById("btnReset").style.display = 'none';
 	}
@@ -23,6 +29,7 @@ window.onload = function (){
 	for(var i=0; i<items.length; i++){
 		click(items[i]);
 	}
+	document.getElementById("search").onclick = search;
 }
 
 function handle(project, title, img, projLink){
@@ -30,7 +37,61 @@ function handle(project, title, img, projLink){
 }
 
 function click(item){
-	item.onclick = function(){item.parentNode.parentNode.childNodes[1].innerHTML=item.innerText};
+	item.onclick = function(){item.parentNode.parentNode.childNodes[1].innerHTML=item.innerText;
+		search();
+	};
+}
+
+function search(){
+	var projects = document.getElementsByClassName('project');
+	var title = document.getElementById("searchInput").value;
+	var titles = document.getElementsByClassName('card-title');
+	if(title != ""){
+		filter();
+		for(var i=0; i<titles.length; i++){
+			if(titles[i].innerText != title){
+				projects[i].style.display = 'none';
+			}
+		}
+	}else{
+		filter();
+	}
+}
+
+function initFilterProjects(projects){
+	for(var i=0; i<projects.length; i++){
+			projects[i].style.display = 'inline';
+	}
+}
+
+function filter(){
+	var type = document.getElementById("type").parentNode.childNodes[1].innerHTML;
+	var category = document.getElementById("category").parentNode.childNodes[1].innerHTML;
+	var feasibility = document.getElementById("feasibility").parentNode.childNodes[1].innerHTML;
+	var projList = document.getElementsByClassName('project');
+	initFilterProjects(projList);
+	var typeValues = document.getElementsByClassName('type');
+	var categoryValues = document.getElementsByClassName('category');
+	var feasibilityValues = document.getElementsByClassName('feasibility');
+	for(var i=0; i<projList.length; i++){
+		if(type != "All" && type != ""){
+				filterProjects(projList, typeValues, type);	
+		}
+		if(category != "All" && category != ""){
+				filterProjects(projList, categoryValues, category);	
+		}
+		if(feasibility != "All" && feasibility != ""){
+				filterProjects(projList, feasibilityValues, feasibility);	
+		}
+	}
+}
+
+function filterProjects(projects, values, value){
+	for(var i=0; i<projects.length; i++){
+		if(values[i].innerText != value){
+			projects[i].style.display = 'none';
+		}
+	}
 }
 
 function setValues(title, img){
