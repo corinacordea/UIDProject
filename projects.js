@@ -30,7 +30,11 @@ window.onload = function (){
 
 	if(localStorage.has_proposed == 1){
 		addProject();
-	}		
+	}
+
+	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
+	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
+	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";		
 }
 
 function addProject(){
@@ -40,9 +44,6 @@ function addProject(){
 	var storedImages = JSON.parse(localStorage.getItem("proposalFiles"));
 	document.getElementById("imgProposed").setAttribute("src", "images/"+storedImages[0]); 
 	document.getElementById("votesProposed").innerText = localStorage.proposalVotes; 
-	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
-	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
-	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
 }
 
 function handle(project, title, img, projLink){
