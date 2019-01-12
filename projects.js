@@ -1,6 +1,9 @@
 window.onload = function (){
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
+	document.getElementById("type").parentNode.childNodes[1].innerHTML = "";
+	document.getElementById("category").parentNode.childNodes[1].innerHTML = "";
+	document.getElementById("feasibility").parentNode.childNodes[1].innerHTML = "";
 	if(sessionStorage.getItem("userType") === null) {
 		document.getElementById("btnReset").style.display = 'none';
 	}
@@ -28,7 +31,41 @@ function handle(project, title, img, projLink){
 }
 
 function click(item){
-	item.onclick = function(){item.parentNode.parentNode.childNodes[1].innerHTML=item.innerText};
+	item.onclick = function(){item.parentNode.parentNode.childNodes[1].innerHTML=item.innerText;
+		var type = document.getElementById("type").parentNode.childNodes[1].innerHTML;
+		var category = document.getElementById("category").parentNode.childNodes[1].innerHTML;
+		var feasibility = document.getElementById("feasibility").parentNode.childNodes[1].innerHTML;
+		var projList = document.getElementsByClassName('project');
+		initFilterProjects(projList);
+		var typeValues = document.getElementsByClassName('type');
+		var categoryValues = document.getElementsByClassName('category');
+		var feasibilityValues = document.getElementsByClassName('feasibility');
+		for(var i=0; i<projList.length; i++){
+			if(type != "All" && type != ""){
+					filterProjects(projList, typeValues, type);	
+			}
+			if(category != "All" && category != ""){
+					filterProjects(projList, categoryValues, category);	
+			}
+			if(feasibility != "All" && feasibility != ""){
+					filterProjects(projList, feasibilityValues, feasibility);	
+			}
+		}
+	};
+}
+
+function initFilterProjects(projects){
+	for(var i=0; i<projects.length; i++){
+			projects[i].style.display = 'inline';
+	}
+}
+
+function filterProjects(projects, values, value){
+	for(var i=0; i<projects.length; i++){
+		if(values[i].innerText != value){
+			projects[i].style.display = 'none';
+		}
+	}
 }
 
 function setValues(title, img){
