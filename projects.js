@@ -1,14 +1,11 @@
 window.onload = function (){
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
-<<<<<<< HEAD
 	document.getElementById("btnReset").onclick = resetVotes;
 
-=======
 	document.getElementById("type").parentNode.childNodes[1].innerHTML = "";
 	document.getElementById("category").parentNode.childNodes[1].innerHTML = "";
 	document.getElementById("feasibility").parentNode.childNodes[1].innerHTML = "";
->>>>>>> 3eb73b96f45e49eb30d931f73ce2ef67177285e4
 	if(sessionStorage.getItem("userType") === null) {
 		document.getElementById("btnReset").style.display = 'none';
 	}
