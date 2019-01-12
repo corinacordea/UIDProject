@@ -27,6 +27,10 @@ window.onload = function (){
 		click(items[i]);
 	}
 	document.getElementById("search").onclick = search;
+
+	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
+	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";
+	document.getElementById("project3").innerHTML = localStorage.project3 + " votes";
 }
 
 function handle(project, title, img, projLink){
