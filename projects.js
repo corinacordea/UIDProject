@@ -2,6 +2,9 @@ window.onload = function (){
 	if(localStorage.has_proposed == 1){
 		addProject();
 	}
+	if(localStorage.has_promoted == 1){
+		document.getElementById("badgePromote").removeAttribute("hidden");
+	}
 
 	document.getElementById("project1").innerHTML = localStorage.project1 + " votes";
 	document.getElementById("project2").innerHTML = localStorage.project2 + " votes";

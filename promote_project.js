@@ -7,6 +7,18 @@
 	document.getElementById("project_category").innerText = localStorage.proposalCategory;
 	document.getElementById("project_cost").innerText = "Soon to be estimated";
 	document.getElementById("project_type").innerText = "Soon to be decided";
+	document.getElementById("signIn").onclick = function() {
+		if(localStorage.has_promoted == 0) {
+			localStorage.has_promoted = localStorage.has_promoted + 1;
+			$("#myModal").modal('hide');
+			$("#confirmPromote").modal('show');
+		}
+		else {
+			$("#myModal").modal('hide');
+			$("#errorPromote").modal('show');
+		}
+		return false;	
+	};
 
 	$('.input').blur(function() {
     var $this = $(this);
