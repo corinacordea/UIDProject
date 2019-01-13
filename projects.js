@@ -17,11 +17,11 @@ window.onload = function (){
 	document.getElementById("type").parentNode.childNodes[1].innerHTML = "";
 	document.getElementById("category").parentNode.childNodes[1].innerHTML = "";
 	document.getElementById("feasibility").parentNode.childNodes[1].innerHTML = "";
-	if(sessionStorage.getItem("userType") === null) {
-		document.getElementById("btnReset").style.display = 'none';
+	if(sessionStorage.getItem("userType") == "user") {
+		document.getElementById("btnReset").style.display = 'block';
 	}
 	else {
-		document.getElementById("btnReset").style.display = 'block';
+		document.getElementById("btnReset").style.display = 'none';
 	}
 	var projects = document.getElementsByClassName('jsProject');
 	var imgs = document.getElementsByClassName('hvrbox');

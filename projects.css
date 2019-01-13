@@ -34,6 +34,7 @@ html {
 
 #btnReset{
 	text-align: center;
+	display: none;
 }
 
 .row{
