@@ -6,7 +6,7 @@
 		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<link rel="stylesheet" href="stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="vote_project.css" type="text/css">
 		<link rel="stylesheet" href="review-project-adviser.css" type="text/css">
 		<script src="adviser.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -29,18 +29,47 @@
 				</div>
 				</div>
 		</nav>
+		<div class = "body-content">
+		<div class="project-details">
+			<div class="row" style="display:inline-block; text-align:center">
+				<div class="input-group input-group-lg" >
+					<h1 class="my-4" id="project_title"></h1>
+				</div>
+			</div>
+			<br><br>
+			<div class = "row" style="border-bottom: 50px solid #F0F3F5">
+				<img src="" class="img-thumbnail" id="project_image">
+				<div class="col-3 details" style = "margin-left: 150px; margin-right: 50px; ">
+					<h3 class="my-3">Type</h3>
+					<p id = "type"></p>
+					<br>
+					<h3 class="my-3">Category</h3>
+					<p id = "category"></p>
+					<br>
+					<h3 class="my-3">Address</h3>
+					<p id = "address"></p>
+				</div>
+			</div>
+			<br><br>
+			<div class = "row">
+				<div style = "margin-left: 100px; margin-right: 100px">
+					<h3 class="my-3">Project Description</h3>
+					<p id = "description"></p>
+					<br>
+					<h3 class="my-3">Estimated cost</h3>
+					<p id="price"></p>
 
-		<div class="container" id="detailsContainer">
-  			<h2 class="my-4" id="project_title"></h2>
- 			<div class="row">
-    			<div class="col-md-8">
+				</div>
+			</div>
+			<div class="row">
+				<div style ="margin-left: 100px">
       				<img class="img-fluid" id="project_image" alt="">
       					<form class="form-horizontal">
 	      					<h3 class="my-3">Eligible:</h3>
 	      					<p><i>(Press to modify status)</i></p>
-	    					<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger">
+	    					<input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="danger" style="left:0">
 							<h3 class="my-3">Reason:</h3>
-							<textarea class="form-control" aria-label="With textarea"></textarea>
+							<textarea class="form-control" aria-label="With textarea" style="width: 1000px"></textarea>
 	      					<button class="btn btn-secondary" type="submit" id="updateButton" data-toggle="modal" data-target="#notification">Review project</button>
 	      					<br><br>
       					</form>
@@ -57,22 +86,12 @@
     						</div>
   							</div>
 						</div>
-    			</div>
+						<div>
 
-    		<div class="col-md-4">
-    			<h3 class="my-3">Type</h3>
-    			<p id="type"></p>
-    			<h3 class="my-3">Category</h3>
-    			<p id="category"></p>
-    			<h3 class="my-3">Address</h3>
-    			<p id="address"></p>
-      			<h3 class="my-3">Project Description</h3>
-      			<p id="description"></p>
-      			<h3 class="my-3">Estimated cost</h3>
-				<p id="price"></p>
-    		</div>
+
 
   			</div>
-  		</div>
+		</div>
+</div>
 </BODY>
 </HTML>
