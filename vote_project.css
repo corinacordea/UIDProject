@@ -1,5 +1,6 @@
 body {
 	background-image: url("images/back.jpg");
+	font-family: "Ubuntu" sans-serif;
 }
 
 .body-content{
@@ -20,6 +21,9 @@ body {
 }
 
 .img-thumbnail{
+	margin-left: 100px;
+	width: 540px;
+	height: 360px;
 	margin-bottom: 10px;
 }
 
@@ -71,4 +75,36 @@ nav div ul li{
 
 #project_title{
 	margin-left: 20px;
+}
+
+.project-details {
+	margin: 0 auto;
+	width: 70%;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.my-4 {
+	padding: 10px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+#description {
+	text-align: justify;
+
+}
+
+#price {
+	text-align: justify;
+
+}
+
+.my-3 {
+	color: #29ABED;
+	text-align: left;
+}
+
+p {
+	font-size: 20px;
 }
