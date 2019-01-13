@@ -95,7 +95,17 @@ nav div ul li{
 
 }
 
+#project_desc {
+	text-align: justify;
+
+}
+
 #price {
+	text-align: justify;
+
+}
+
+#project_cost {
 	text-align: justify;
 
 }

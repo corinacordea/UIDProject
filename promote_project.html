@@ -28,34 +28,68 @@
 				</div>
 		</nav>
 		<div class = "body-content">
-		    <div class="row">
-			<div class="input-group input-group-lg">
-			  <h1 class="my-4" id="project_title"></h1>
-			</div>
-			</div>
-			<div class ="row">
-			<div class="col-6">
-			  <img src="" class="img-thumbnail" id="project_image">
-			</div>
-			<div class="col-3 details">
-    			<h3 class="my-3">Type</h3>
-    			<p id="project_type">District</p>
-    			<h3 class="my-3">Category</h3>
-    			<p id="project_category">Green Space</p>
-    			<h3 class="my-3">Address</h3>
-    			<p id="project_address">str. Observatorului, nr. 34</p>
-			</div>
-			<div class="col-3 details">
-      			<h3 class="my-3">Project Description</h3>
-      			<p id="project_desc">Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-      			<h3 class="my-3">Estimated cost</h3>
-      			<p id="project_cost">40000 lei</p>
-				<div id = "btnWrap">
-        			 <button class="btn btn-success" href="#signin" data-toggle="modal" data-target=".log-sign">Promote</button>
-				 </div>
+
+		<div class="project-details">
+		<div class="row" style="display:inline-block; text-align:center">
+			<div class="input-group input-group-lg" >
+				<h1 class="my-4" id="project_title"></h1>
 			</div>
 		</div>
+		<br><br>
+		<div class = "row" style="border-bottom: 50px solid #F0F3F5">
+			<img src="" class="img-thumbnail" id="project_image">
+			<div class="col-3 details" style = "margin-left: 150px; margin-right: 50px; ">
+				<h3 class="my-3">Type</h3>
+				<p id = "project_type"></p>
+				<br>
+				<h3 class="my-3">Category</h3>
+				<p id = "project_category"></p>
+				<br>
+				<h3 class="my-3">Address</h3>
+				<p id = "project_address"></p>
+			</div>
+		</div>
+		<br><br>
+		<div class = "row">
+			<div style = "margin-left: 100px; margin-right: 100px">
+				<h3 class="my-3">Project Description</h3>
+				<p id = "project_desc"></p>
+				<br>
+				<h3 class="my-3">Estimated cost</h3>
+				<p id="project_cost"></p>
+				<div id = "btnWrap">
+        			 <button class="btn btn-primary btn-lg" href="#signin" data-toggle="modal" data-target=".log-sign">Promote</button>
+				 </div>
 
+				<div class="modal fade" id="confirmVote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-body">
+								You have successfully voted for this project. Thank you!
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="errorVote" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-body">
+								The vote cannot be processed because you have voted 2 times. In case you changed your mind, reset the votes and start again.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
     <div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style='margin-top: 200px;'>
 		  <div class="modal-dialog modal-sm" >
 		    <div class="modal-content" style="width: 800px">
