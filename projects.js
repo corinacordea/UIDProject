@@ -9,7 +9,7 @@ window.onload = function (){
 	document.getElementById("project4").innerHTML = localStorage.project4 + " votes";
 	document.getElementById("project5").innerHTML = localStorage.project5 + " votes";
 	document.getElementById("project6").innerHTML = localStorage.project6 + " votes";
-	
+
 	document.getElementById("signIn").onclick = signInFunc;
 	document.getElementById("confirmsignup").onclick = signUp;
 	document.getElementById("btnReset").onclick = resetVotes;
@@ -147,6 +147,9 @@ function redirect(){
 			if (sessionStorage.getItem("userType") == "adviser") {
 				window.location = "review-project-adviser.html";
 			}
+			else {
+				window.location = "project-page.html";
+			}
 		}
 	}
   	return false;
@@ -199,13 +202,13 @@ function resetVotes() {
 		if(localStorage.project3 != 4500) {
 			localStorage.project3--;
 		}
-		if(localStorage.project4 != 10) {
+		if(localStorage.project4 != 0) {
 			localStorage.project4--;
 		}
 		if(localStorage.project5 != 700) {
 			localStorage.project5--;
 		}
-		if(localStorage.project6 != 200) {
+		if(localStorage.project6 != 0) {
 			localStorage.project6--;
 		}
 		if(localStorage.proposalVotes != 0) {
