@@ -146,6 +146,10 @@ img:hover {
 }
 
 .selectors {
+	position: fixed;
+	z-index: 99999;
+	top: 50px;
+	width: 100%;
 	background-color: white;
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 	padding: 20px;
@@ -162,4 +166,10 @@ img:hover {
 .col {
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.projects-list {
+	position: relative;
+	margin-top: 100px;
+
 }
