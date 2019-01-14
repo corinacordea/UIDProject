@@ -7,6 +7,12 @@ window.onload = function (){
 	document.getElementById("price").innerText = localStorage.projectPrice;
 	document.getElementById("project_image").setAttribute("src",localStorage.projectImage);
 	document.getElementById("submitButton").onclick = vote;
+	if((document.getElementById("project_title").innerText == "Colina Park Rehabilitation")  || (document.getElementById("project_title").innerText == "Colina Park Rehabilitation")) {
+		document.getElementById("btnWrap").style.display = 'none';
+	}
+	else {
+		document.getElementById("btnWrap").style.display = 'block';
+	}
 }
 
 function vote() {

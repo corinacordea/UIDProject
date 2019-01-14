@@ -6,6 +6,7 @@ function initialize() {
 	document.getElementById("block3").onclick = block3;
 	document.getElementById("block4").onclick = block4;
 	document.getElementById("logout").onclick = signOut;
+	document.getElementById("userName").innerHTML = localStorage.username;
 }
 
 
@@ -17,9 +18,11 @@ function signOut() {
 
 function block1() {
 	if (document.getElementById("block1").innerHTML == "Block") {
+		localStorage.is_blocked = 1;
 		document.getElementById("block1").innerHTML = "Unblock";
 	}
 	else {
+		localStorage.is_blocked = 0;
 		document.getElementById("block1").innerHTML = "Block";
 	}
 	return false;

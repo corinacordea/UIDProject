@@ -3,13 +3,13 @@ window.onload = initialize;
 function initialize() {
   document.getElementById("signIn").onclick = signInFunc;
   document.getElementById("confirmsignup").onclick = signUp;
-  
+
   localStorage.project1 = 300;
   localStorage.project2 = 163000;
   localStorage.project3 = 4500;
-  localStorage.project4 = 10;
+  localStorage.project4 = 0;
   localStorage.project5 = 700;
-  localStorage.project6 = 200;
+  localStorage.project6 = 0;
 }
 
 function signInFunc() {
@@ -25,10 +25,13 @@ function signInFunc() {
     sessionStorage.setItem("user", "adviser");
     window.location = "index-adviser.html";
   }
-  else if (username == localStorage.username && password == localStorage.password){
+  else if (username == localStorage.username && password == localStorage.password && localStorage.is_blocked == 0){
     sessionStorage.setItem("userType", "user");
     sessionStorage.setItem("user", username);
     window.location = "index-user.html";
+  }
+  else{
+    alert("Your account has been suspended!");
   }
   return false;
 }
